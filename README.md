@@ -12,7 +12,7 @@ Step 1: Clone this repository
 
 Step 2: In the 'commands' panel, set up keybindings for angeltrack as shown in the following images (TX offset is optional and can be omitted if not required)
 
-![RX Keybinding][images/rx.png]
-![TX Keybinding][images/tx.png]
+![RX Keybinding](images/rx.png)
+![TX Keybinding](images/tx.png)
 
 Step 3: Enable the keybindings using the small keyboard-button in the 'commands' panel.
