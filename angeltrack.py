@@ -23,7 +23,6 @@ tx_config_req = requests.get(api_url_tx)
 tx_config = tx_config_req.json()
 
 if args.tx:
-    print(rx_config)
     tx_config['SSBModSettings']['inputFrequencyOffset'] = rx_config['SSBDemodSettings']['inputFrequencyOffset'] + tx_offset
     rx_config['SSBDemodSettings']['audioMute'] = 1
     tx_config['SSBModSettings']['audioMute'] = 0
