@@ -30,11 +30,5 @@ if args.rx:
     rx_config['SSBDemodSettings']['audioMute'] = 0
     tx_config['SSBModSettings']['audioMute'] = 1
 
-# workaround for issue #296
-if tx_config['SSBModSettings']['usb'] == 0:
-    tx_config['SSBModSettings']['lowCutoff'] = -tx_config['SSBModSettings']['lowCutoff']
-    tx_config['SSBModSettings']['bandwidth'] = -tx_config['SSBModSettings']['bandwidth']
-
-requests.put(api_url_rx, data=json.dumps(rx_config))
-requests.put(api_url_tx, data=json.dumps(tx_config))
-
+requests.patch(api_url_rx, data=json.dumps(rx_config))
+requests.patch(api_url_tx, data=json.dumps(tx_config))
